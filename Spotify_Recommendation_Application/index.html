@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Music Recommendation App</title>
+        <script defer type= "text/javascript" src="javascript/index.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center><h1 class="title">Find New Music</h1></center>
+            <div class="topnav">
+              <a class="active" href="index.html">Home</a>
+              <a href="history.html">History</a>
+              <a href="about.html">About</a>
+            </div>
+        <br>
+        <center><h1 style="color: white;">Search Your Favorite Songs, Artists or Albums and Find Something New!</h1></center>
+        
+        <hr>
+        <br>
+        <br>
+        <center>
+        <div class="content-box">
+        <form id="search-form" onsubmit="getSearchResults(); return false">
+        <label for="search-type">Choose Type of Search:</label>
+        <br>
+        <br>
+        <center>
+        <div class="custom-select">
+            <select id="search-type">
+                <option>Track</option>
+                <option>Artist</option>
+                <option>Album</option>
+            </select>
+          </div>
+        </center>
+        <br>
+        <hr>
+        <label for="search-input">Enter Song/Artist/Album:</label>
+        <br>
+        <br>
+        <center>
+        <input type="search" id="search-input" placeholder="Search...">
+        <br>
+        <br>
+        </center>
+        <input type="submit" class="button-24" value="FIND MUSIC"></input>
+        </center>
+        </form>
+        </div>
+
+    <!-- Search Results Div -->
+    <div id="searchResults">
+        <!-- JS loads data here -->
+    </div>
+
+    <!-- Song/Artist/Album Info Div -->
+    <div id="infoDiv">
+        <!-- JS loads info here -->
+    </div>
+
+    <!-- Recommendations Div -->
+    <div id="recDiv">
+        <!-- JS loads info here -->
+    </div>
+    </body>
+</html>
